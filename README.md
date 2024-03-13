@@ -13,3 +13,5 @@ can search for books by user id. displays all the books the user has borrowed.
 Always exit program by entering 6 otherwise data will not be saved.
 
 DO NOT change the name of the files "users.txt" and "books.txt".
+
+Currently only one entry in users.txt and books.txt.
