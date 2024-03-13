@@ -1,3 +1,4 @@
+//filename Library.java
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -143,13 +144,13 @@ public class Library {
                 break;
             }
         }
-        if (j == books.size()){
+        if (j == users.get(i).borrowed.size()){
             System.out.println("No book with that name has been borrowed\n");
             return;
         }
         books.get(users.get(i).borrowed.get(j)).available = true;
+        System.out.println(users.get(i).name + " has returned the book \"" + books.get(users.get(i).borrowed.get(j)).title + "\"");
         users.get(i).borrowed.remove(j);
-        System.out.println(users.get(i).name + " has returned the book \"" + books.get(j).title + "\"");
     }
     public void search(){
         Scanner input = new Scanner(System.in);
