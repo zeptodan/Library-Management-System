@@ -49,10 +49,22 @@ public class Library {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter title of book: ");
         String title = input.nextLine();
+        if (title.isBlank()){
+            System.out.println("Invalid title");
+            return;
+        }
         System.out.println("Enter author of book: ");
         String author = input.nextLine();
+        if (author.isBlank()){
+            System.out.println("Invalid author");
+            return;
+        }
         System.out.println("Enter genre of book: ");
         String genre = input.nextLine();
+        if (genre.isBlank()){
+            System.out.println("Invalid genre");
+            return;
+        }
         Book book = new Book(books.size(),title,author,genre,true);
         books.add(book);
         System.out.println("Book has been added");
@@ -62,8 +74,16 @@ public class Library {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter name of user: ");
         String name = input.nextLine();
+        if (name.isBlank()){
+            System.out.println("Invalid name");
+            return;
+        }
         System.out.println("Enter contact info of user: ");
         String contactInfo = input.nextLine();
+        if (contactInfo.isBlank()){
+            System.out.println("Invalid contact info");
+            return;
+        }
         ArrayList<Integer> empty = new ArrayList<>();
         User user = new User(users.size(),name,contactInfo,empty);
         users.add(user);
